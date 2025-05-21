@@ -84,7 +84,7 @@ The figure below summarizes the vegetation change detection results from three m
 
 ![image](https://github.com/user-attachments/assets/9c22335b-7b2f-434a-8086-203ae8f50fe3)
 
-## 5 References
+## 5 Data Source
 
 DeepGlobe Land Cover Dataset: https://competitions.codalab.org/competitions/18468
 
