@@ -1,6 +1,6 @@
 # AI4EO Project
 
-The introduction and guide for this project were uploaded to YouTube: https://youtu.be/SIzm7RYnig0
+The introduction and explanation for this project were uploaded to YouTube: https://youtu.be/SIzm7RYnig0
 
 
 
