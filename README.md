@@ -22,7 +22,7 @@ This project uses two datasets:
   - Labels: 7 classes including `forest`, `farmland`, `water`, `urban`, `bare soil`, `grassland`, and `others`.
   - Size: **1,146 training images** with corresponding masks. (Due to limited computing resources, only 100 sets of images were used)
 
-![image](https://github.com/user-attachments/assets/e6c68191-2774-421f-b6f9-0085c946be1f)
+![image-20250519162633201](https://github.com/user-attachments/assets/a9a04af5-a617-4dc1-a7bd-01ff82d8c378)
 
 #### 2.2 Wildfire Area Imagery
 
@@ -38,11 +38,11 @@ This project uses two datasets:
     - Atmospheric Correction: Processed to L2A level using Sen2Cor.
     - Image Registration: Aligned pre- and post-fire images (error <1 pixel).
 
-![image](https://github.com/user-attachments/assets/08d88e33-4e86-489e-a78e-9c6798eb9c88)
+![image-20250519162809993](https://github.com/user-attachments/assets/61b3663a-01e3-48aa-959c-a487d824f534)
 
 ## 3 Methodology
 
-![image](https://github.com/user-attachments/assets/31bfb7f9-1fa4-40e4-8c13-d0e538d7f00e)
+![image](https://github.com/user-attachments/assets/d392b60d-dde4-4362-9c1a-857ca5b3851c)
 
 Three methods are implemented for vegetation extraction and change detection:
 
@@ -78,17 +78,17 @@ When extracting vegetation areas using NDVI, a threshold value needs to be selec
 
 The figure below summarizes the vegetation change detection results from three methods:
 
-![image](https://github.com/user-attachments/assets/1715cc4f-bb0c-4381-8f84-26802cb7a07c)
+![image-20250519203923509](https://github.com/user-attachments/assets/1a563627-b12e-47b9-a8fa-268e1ec99ea5)
 
-![image](https://github.com/user-attachments/assets/1605acca-6a72-4f88-8b9e-846144e83f88)
+![image-20250519203941758](https://github.com/user-attachments/assets/5584ae0c-22cf-4141-bf74-bf40ea1ed9df)
 
-![image](https://github.com/user-attachments/assets/9c22335b-7b2f-434a-8086-203ae8f50fe3)
+![image-20250519203954906](https://github.com/user-attachments/assets/8fd6b1c6-e3b9-4d3a-bfbf-a752e695dd39)
 
 ## 5 Environmental cost assessment
 In this project, we are fully aware of the potential environmental impacts of the work carried out and are actively thinking about how to improve and mitigate them.
 
 #### 5.1 Energy Consumption
-The main energy consumption during the running of the project comes from the use of the v2-8 TPU (Tensor Processing Unit) on the Google Colab. the TPU is a hardware device specialized in accelerating machine learning computations, and although it has significant advantages in terms of computational efficiency, its energy consumption should not be ignored. According to the information provided by Google, the power consumption of the v2-8 TPU is about 250 watts. In this project, the CNN training process lasted about 4 hours, according to which the energy consumption in the training phase can be roughly calculated to be about 1 kW. In addition, in other phases such as data preprocessing and analysis, although the single running time is shorter, due to the more frequent operation, the cumulative energy consumption is also considerable, which is expected to account for about 30% of the total energy consumption. Taken together, the total energy consumption over the entire project cycle is about 1.43 kWh.
+The main energy consumption during the running of the project comes from the use of the v2-8 TPU (Tensor Processing Unit) on the Google Colab. The TPU is a hardware device specialized in accelerating machine learning computations, and although it has significant advantages in terms of computational efficiency, its energy consumption should not be ignored. According to the information provided by Google, the power consumption of the v2-8 TPU is about 250 watts. In this project, the CNN training process lasted about 4 hours, according to which the energy consumption in the training phase can be roughly calculated to be about 1 kW. In addition, in other phases such as data preprocessing and analysis, although the single running time is shorter, due to the more frequent operation, the cumulative energy consumption is also considerable, which is expected to account for about 30% of the total energy consumption. Taken together, the total energy consumption over the entire project cycle is about 1.43 kWh.
 
 #### 5.2 Code Efficiency
 In terms of code writing and optimization, we focus on improving code operation efficiency to reduce unnecessary energy waste. By adopting efficient algorithms and data structures, we analyze and tune the performance of the code to minimize the running time and resource consumption of the program. For example, in the model training stage, we avoided over-training and unnecessary computational iterations by reasonably setting the hyper-parameters and adopting the early-stop mechanism.
