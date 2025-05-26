@@ -84,7 +84,22 @@ The figure below summarizes the vegetation change detection results from three m
 
 ![image](https://github.com/user-attachments/assets/9c22335b-7b2f-434a-8086-203ae8f50fe3)
 
-## 5 Data Source
+## 5 Environmental cost assessment
+In this project, we are fully aware of the potential environmental impacts of the work carried out and are actively thinking about how to improve and mitigate them.
+
+#### 5.1 Energy Consumption
+The main energy consumption during the running of the project comes from the use of the v2-8 TPU (Tensor Processing Unit) on the Google Colab. the TPU is a hardware device specialized in accelerating machine learning computations, and although it has significant advantages in terms of computational efficiency, its energy consumption should not be ignored. According to the information provided by Google, the power consumption of the v2-8 TPU is about 250 watts. In this project, the CNN training process lasted about 4 hours, according to which the energy consumption in the training phase can be roughly calculated to be about 1 kW. In addition, in other phases such as data preprocessing and analysis, although the single running time is shorter, due to the more frequent operation, the cumulative energy consumption is also considerable, which is expected to account for about 30% of the total energy consumption. Taken together, the total energy consumption over the entire project cycle is about 1.43 kWh.
+
+#### 5.2 Code Efficiency
+In terms of code writing and optimization, we focus on improving code operation efficiency to reduce unnecessary energy waste. By adopting efficient algorithms and data structures, we analyze and tune the performance of the code to minimize the running time and resource consumption of the program. For example, in the model training stage, we avoided over-training and unnecessary computational iterations by reasonably setting the hyper-parameters and adopting the early-stop mechanism.
+
+#### 5.3 Indirect Environmental Impact
+In terms of indirect environmental impacts, this project has certain positive significance. By using AI technology to analyze and process Earth observation data, valuable information can be extracted more efficiently to provide decision support for environmental protection and resource management. For example, the vegetation detection and change analysis model we developed can be used to monitor vegetation recovery after forest fires, assess the impact of land use changes on the ecological environment, and so on, thus helping to formulate more scientific and reasonable ecological protection measures and reduce the negative impact of human activities on the environment. However, the project may also have some potential indirect environmental risks, such as increased energy consumption in the data center during data storage and transmission. In order to cope with these risks, we try to use local storage and computing resources to reduce the reliance on remote data centers; at the same time, we focus on the application of data compression and efficient transmission technologies to reduce the energy consumption during data storage and transmission.
+
+Overall, some measures have been taken to reduce environmental costs during the implementation of this project, but there is still room for further improvement. In the future, we will continue to pay attention to the issues of energy consumption and environmental impact, actively explore more environmentally friendly hardware solutions, optimize codes and algorithms to improve efficiency, and make full use of the advantages of AI technology to make greater contributions to environmental protection and sustainable development.
+
+
+## 6 Data Source
 
 DeepGlobe Land Cover Dataset: https://competitions.codalab.org/competitions/18468
 
